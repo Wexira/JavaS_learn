@@ -28,36 +28,103 @@
       );
     </script> -->
 
-    <script>
-      var x = 5;
-      var y;
-      var result;
+    <script type="text/javascript">
+      /* Математические операции */
+      // var x = 5;
+      // var y;
+      // var result;
 
-      y = 5;
-      result = x + y;
-      document.write(result);
-      result *= x;
-      document.write("<br>" + result);
-      result--;
-      document.write("<br>" + result);
-      document.write("<br>");
-      document.write(x + "+" + y + "=" + (x + y));
+      // y = 5;
+      // result = x + y;
+      // document.write(result);
+      // result *= x;
+      // document.write("<br>" + result);
+      // result--;
+      // document.write("<br>" + result);
+      // document.write("<br>");
+      // document.write(x + "+" + y + "=" + (x + y));
 
-      document.write("<br>");
-      var str_1 = "12";
-      var str_2 = "24";
-      document.write(Number(str_1) + Number(str_2));
-      
-      document.write("<br>");
-      var bool;
-      var z = 7;
-      var d = 7;
-      bool = z >= d;
-      document.write(bool);
+      // document.write("<br>");
+      // var str_1 = "12";
+      // var str_2 = "24";
+      // document.write(Number(str_1) + Number(str_2));
 
-      document.write("<br>");
-      document.write(15 + " % " + 7 + " = " + (15 % 7)); /* остаток при делении */
+      // document.write("<br>");
+      // var bool;
+      // var z = 7;
+      // var d = 7;
+      // bool = z >= d;
+      // document.write(bool);
 
+      // document.write("<br>");
+      // document.write(15 + " % " + 7 + " = " + (15 % 7)); /* остаток при делении */
+
+      /* Условные операторы */
+
+      // document.write("<br>");
+      //   var x = 4; /*в коробке 4 яблока*/
+      //   var y = 5; /*в коробке 5 яблок*/
+      //   if (x != y)
+      //     document.write("x != y"); /* "!=" - означает не равно */
+         
+      // document.write("<br>");
+      //   var x = 4; 
+      //   var y = 5; 
+      //   if (x < y) {
+      //     document.write("x < y");
+      //     document.write("<br>");
+      //     document.write("4 < 5");
+      //   }
+
+        /* Условный оператор if */
+
+        // var x = 5; 
+        // var y = 5; 
+
+        // var bool = false;
+
+        // if (x > y) 
+        //   document.write("x > y");
+        // else if (x == y) 
+        //   document.write("x == y");
+        // else 
+        //   document.write("x < y");  
+        
+        /* Условный оператор switch case */
+
+        // document.write("<br>");
+
+        // var result = 5;
+        // switch(result) {
+        //   case 1: document.write("result = 1");  break;
+        //   case 2: document.write("result = 2");  break;
+        //   case 3: document.write("result = 3");  break;
+        //   case 4: document.write("result = 4");  break;
+        //   default:document.write("result > 4");
+
+        // }
+
+        // document.write("<br>");
+        
+        //   x >= y ? document.write("YES") : document.write("NO");
+        // document.write("<br>");
+
+          
+          
+        
+
+        var x = 6; 
+        var y = 5; 
+
+        var bool = false;
+
+        if (x < y || bool == true) /* символ && означает "и", "!=" - не равно, "||" - или */
+          document.write("x > y");
+        else if (x == y) 
+          document.write("x == y"); /* не обязательный оператор, но не может быть без if */
+        else 
+          document.write("x < y");  
+        
     </script>
   </body>
 </html>

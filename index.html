@@ -62,6 +62,7 @@
     </script>-->
 
     <!-- /* Условные операторы */
+
       <script type="text/javascript"> 
 
       document.write("<br>"); 
@@ -94,11 +95,15 @@
         else if (x == y) 
           document.write("x == y");
         else 
-          document.write("x < y");   -->
+          document.write("x < y");   
+      </script> -->
 
-    <!-- /* Условный оператор switch case */ 
+    <!-- /* Условный оператор 
+               switch case */ 
           
           document.write("<br>");
+
+      <script type="text/javascript"> 
 
         var result = 5;
         switch(result) {
@@ -107,56 +112,59 @@
           case 3: document.write("result = 3");  break;
           case 4: document.write("result = 4");  break;
           default:document.write("result > 4");
-
-        // }
+         }
 
         document.write("<br>");
         
-          x >= y ? document.write("YES") : document.write("NO");
+        x >= y ? document.write("YES") : document.write("NO");
         document.write("<br>");
+      </script> -->
 
-        
+    <!-- <script type="text/javascript"> 
+       
         var x = 6; 
         var y = 5; 
 
         var bool = false;
 
-        if (x < y || bool == true) символ && означает "и", "!=" - не равно, "||" - или  -->
-    <!-- document.write("x > y");
+        if (x < y || bool == true) символ && означает "и", "!=" - не равно, "||" - или  
+     document.write("x > y");
         else if (x == y) 
-          document.write("x == y");  не обязательный оператор, но не может быть без if  -->
-    <!-- else 
-          document.write("x < y");  
+          document.write("x == y");  не обязательный оператор, но не может быть без if  
+    else 
+          document.write("x < y"); 
         </script> -->
 
     <!--  Циклы  -->
 
+    <!--Цикл for
     <script type="text/javascript">
-      /* Цикл for */
-      var i;
-      for (i = 0; i < 10; i += 3) {
-        if (i % 3 == 0 && i != 0)
-          continue; /* continue означает, что все значения кратные 3 пропускаются. и цикл продолжается дальше */
-        if (i == 8)
-          break; /* break означает, что при выполнении условия что i = 8, break закончивает выполнение цикла до 8  */
-        document.write(i + "<br>");
-      } /* в цикле for все записывается внутри цикла */
+       var i;
+       for (i = 0; i < 10; i += 3) {
+         if (i % 3 == 0 && i != 0) continue; 
+           /* continue означает, что все значения кратные 3 пропускаются. и цикл продолжается дальше */
+         if (i == 8) break; /* break означает, что при выполнении условия что i = 8, break закончивает выполнение цикла до 8  */
+         document.write(i + "<br>");
+       } /* в цикле for все записывается внутри цикла */
 
       /* Цикл while */
-      var x = 0;
-      while (x < 10) {
-        document.write(x + "<br>");
-        x += 2;
-      }
-      /* в цикле while сначала указывается переменная перед циклом, затем в цикле в скобках например: (х < 10), и за циклом
-        х+= 2 */
 
-      /* Цикл do while (выполняется 1 раз - 100%) */
-      var y = 1000;
-      do {
-        document.write("Цикл сработал" + "<br>");
-      } while (y < 100);
-    </script>
+       var x = 0;
+       while (x < 10) {
+         document.write(x + "<br>");
+         x += 2;
+       }
+       в цикле while сначала указывается переменная перед циклом, затем в цикле в скобках например: (х < 10), и за циклом
+        х+= 2 
+
+      Цикл do while (выполняется 1 раз - 100%)
+
+     var y = 1000;
+     do {
+       document.write("Цикл сработал" + "<br>");
+     } while (y < 100); 
+    </script> -->
+     
 
     <!-- Методы alert, confirm, prompt -->
 
@@ -165,12 +173,24 @@
     prompt - выводит на экран поле ввиде всплывающего окна, 
     в которое вписывается что угодно -->
 
-    <script type="text/javascript">
+    <!-- 
+      <script type="text/javascript">
       var person;
       if (confirm("Are you sure?")) {
         person = prompt("Hi, what's your name?");
         alert("Hello," + person);
       } else alert("Person not sure");
+    </script> -->
+
+    <!-- Массивы -->
+    <!-- 1. счет в массиве начинается с нуля (с нулевого элемента) 
+         2. значения: строчные элементы (str), дробные числа, целые числа, булевые операции (true, false) 
+    
+        -->
+
+    <script type="text/javascript">
+      var arr = new Array("str", 1.23, 7, false);
+      document.write(arr[0] + "<br>" + arr[2]);
     </script>
   </body>
 </html>

@@ -164,7 +164,6 @@
        document.write("Цикл сработал" + "<br>");
      } while (y < 100); 
     </script> -->
-     
 
     <!-- Методы alert, confirm, prompt -->
 
@@ -185,12 +184,27 @@
     <!-- Массивы -->
     <!-- 1. счет в массиве начинается с нуля (с нулевого элемента) 
          2. значения: строчные элементы (str), дробные числа, целые числа, булевые операции (true, false) 
-    
+    3. arr.length - точка означает к какой функции этого элемента мы обращаемся , length узнает сколько в массиве имеется строк
+    символов
+    4. Операции с массивом: вывод, присвоить какое-то значение. 
         -->
 
     <script type="text/javascript">
       var arr = new Array("str", 1.23, 7, false);
-      document.write(arr[0] + "<br>" + arr[2]);
+      for (var i = 0; i < arr.length; i++) 
+        document.write(arr[i] + "<br>");
+
+      arr = new Array();
+      for (i = 0; i < 10; i++) {
+        arr[i] = i * 3;
+        document.write(arr[i] + "<br>");
+      }
+      var summ = 0;
+      for (i = 0; i < arr.length; i++) 
+      summ += arr[i];
+      document.write("Сумма - " + summ + "<br>");
+
+      document.write("Среднее арифметическое значение - " + (summ / arr.length));
     </script>
   </body>
 </html>

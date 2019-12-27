@@ -157,5 +157,20 @@
         document.write("Цикл сработал" + "<br>");
       } while (y < 100);
     </script>
+
+    <!-- Методы alert, confirm, prompt -->
+
+    <!-- alert - вызывает всплывающее окно,
+    confirm - подтверждение,
+    prompt - выводит на экран поле ввиде всплывающего окна, 
+    в которое вписывается что угодно -->
+
+    <script type="text/javascript">
+      var person;
+      if (confirm("Are you sure?")) {
+        person = prompt("Hi, what's your name?");
+        alert("Hello," + person);
+      } else alert("Person not sure");
+    </script>
   </body>
 </html>

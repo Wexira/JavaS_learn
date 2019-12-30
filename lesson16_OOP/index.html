@@ -3,29 +3,51 @@
 <head>
     <meta charset="utf-8" />
     <title>Изучаем язык Java Script</title>
+</head>
+
+<body>
+    <!-- Math -->
 
     <script type="text/javascript">
         var text = "Число PI - " + Math.PI;
         text += "\nЧисло E - " + Math.E;
         text += "\nМодуль -7 - " + Math.abs(-7);
         text += "\nСинус 0.3 - " + Math.sin(0.3); /* 0.3 - это радиан */
-        text += "\nСлучайное число - " + Math.random(); 
+        text += "\nСлучайное число - " + Math.random();
         /* math.random -генерирует значение от 0 до 1 и с кучей символов после точки */
         text += "\nСлучайное число от 0 до 10 - " + Math.floor(Math.random() * 11);
 
 
-        Math.floor(5.3); /* floor - округляет значение до меньшего */
-        Math.ceil(5.6); /* ceil - округляет значение до большего */
+        /* Math.floor(5.3);  floor - округляет значение до меньшего */
+        /* Math.ceil(5.6);  ceil - округляет значение до большего */
 
 
         alert(text);
 
     </script>
 
-</head>
+    <!-- Date and time -->
 
-<body>
+    <script type="text/javascript">
+        var date = new Date();
+        text = "Год сейчас - " + date.getFullYear(); /* get выводит значение */
+        text += "\nМесяц сейчас - " + date.getMonth();
+        text += "\nДень сейчас - " + date.getDate();
+        text += "\nЧасов сейчас - " + date.getHours();
+        text += "\nМинут сейчас - " + date.getMinutes();
+        text += "\nСекунд сейчас - " + date.getSeconds();
+        // alert(text); 
 
+        var date = new Date (2019, 11, 30, 16, 26, 30);
+        date.setMinutes(42); /* set устанавливает значение */
+        text = "Год сейчас - " + date.getFullYear();
+        text += "\nМесяц сейчас - " + date.getMonth();
+        text += "\nДень сейчас - " + date.getDate();
+        text += "\nЧасов сейчас - " + date.getHours();
+        text += "\nМинут сейчас - " + date.getMinutes();
+        text += "\nСекунд сейчас - " + date.getSeconds();
+        alert(text);
+    </script>
 </body>
 
 </html>

@@ -1,18 +1,78 @@
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Изучаем язык Java Script</title>
-    <script type="text/javascript" href="JavaScript.js"></script>
-    
-    <!-- События и обработчик событий (события лучше работают и отображаются если добавить их в head) -->
 
-    <script type="text/javascript">
-    
-    </script>
-  </head>
-  <body>
-    <input type="button" name="b" value="Click me">
+<head>
+  <meta charset="utf-8" />
+  <title>Изучаем язык Java Script</title>
 
-    
-  </body>
+  <script type="text/javascript">
+    function valid(form) {
+      var fail = false;
+      var name = form.Name.value;
+      var password = form.password.value;
+      var RePassword = form.RePassword.value;
+      var state = form.state.value;
+
+
+      if (name == "" || name == " ")
+        fail = "Вы не ввели свое имя";
+      else if (password == "")
+        fail = "Вы не ввели свой пароль";
+      else if (password != RePassword)
+        fail = "Пароли не совпадают";
+      else if (state == "")
+        fail = "Укажите пол";
+      if (fail)
+        alert(fail);
+        else
+        window.location = "http://google.com";
+
+    }
+  /* Регулярные выражения */
+  </script>
+
+
+  <!-- События и обработчик событий (события лучше работают и отображаются если добавить их в head), 
+      события можно применять к обычным тегам, например body -->
+
+  <!-- <script type="text/javascript">
+    function buttonClick(button) {
+      alert("Вы нажали на кнопку. Кнопка имеет имя " + button.name + ", также value равно " + button.value + "." );
+    }
+
+    var counter = 0;
+    function OnMouseCounter (element) {
+      counter++;
+      element.innerHTML = "На этот текст было наведено " + counter + " раз";
+    }
+  </script> -->
+</head>
+
+<body>
+
+  <!-- к body  можно добавить  onload="alert('Страница загружена')", тогда будет появляться на страницу данное сообщение -->
+  <!-- <input type="button" name="b" value="Click me" onclick="buttonClick (this)" />
+
+  <span onmouseover="OnMouseCounter (this)">На этот текст было наведено 0 раз</span> -->
+
+  <!-- <select onchange="" name="" id="">
+      <option value="">next</option>
+      <option value="">second</option>
+    </select> -->
+
+  <form action="" method="POST" name="test" id="form">
+    <label for="name">Имя</label>
+    <input type="text" name="Name" placeholder="Имя" id="name"><br><br>
+    <label for="password">Пароль</label>
+    <input type="password" name="password" placeholder="Пароль" id="password"> <br><br>
+    <label for="RePassword">Проверка пароля</label>
+    <input type="password" name="RePassword" placeholder="Введите пароль" id="RePassword"><br><br>
+    <span>Пол:</span>
+    <input type="radio" name="state" id="male" value="Мужской">
+    <label for="">Мужской</label>
+    <input type="radio" name="state" id="female" value="Женский">
+    <label for="">Женский</label> <br><br>
+    <input type="button" onclick="valid(document.getElementById('form'))" name="submit" value="Готово" id="">
+  </form>
+</body>
+
 </html>

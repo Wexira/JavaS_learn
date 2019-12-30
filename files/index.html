@@ -8,26 +8,38 @@
     function valid(form) {
       var fail = false;
       var name = form.Name.value;
+      var email = form.email.value;
       var password = form.password.value;
       var RePassword = form.RePassword.value;
       var state = form.state.value;
 
+      var adr_pattern = /[0-9a-z_-]+@[0-9a-z_-]+\.[a-z]{2,5}/i;   /* - регулярное выражение */
+
+
 
       if (name == "" || name == " ")
         fail = "Вы не ввели свое имя";
-      else if (password == "")
-        fail = "Вы не ввели свой пароль";
+
+      else if (adr_pattern.test(email) == false)
+        fail = "Вы ввели email неправильно";
+
+      else if (email.split('@').length - 1 == 0)  /* Альтернатива регулярных выражений */
+        fail = "Вы ввели email неправильно";
+      /* else if (password == "")
+        fail = "Вы не ввели свой пароль"; */
       else if (password != RePassword)
         fail = "Пароли не совпадают";
       else if (state == "")
         fail = "Укажите пол";
       if (fail)
         alert(fail);
-        else
+      else
         window.location = "http://google.com";
 
     }
-  /* Регулярные выражения */
+  /* Регулярные выражения (проверяют какую-то строчку на соответствие какой-то строчки,
+        проверяют именно соответствие, например email)*/
+
   </script>
 
 
@@ -62,6 +74,9 @@
   <form action="" method="POST" name="test" id="form">
     <label for="name">Имя</label>
     <input type="text" name="Name" placeholder="Имя" id="name"><br><br>
+    <label for="email">Email</label>
+    <input type="text" name="email" placeholder="Email" id="email"><br><br>
+
     <label for="password">Пароль</label>
     <input type="password" name="password" placeholder="Пароль" id="password"> <br><br>
     <label for="RePassword">Проверка пароля</label>

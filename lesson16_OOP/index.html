@@ -38,7 +38,7 @@
         text += "\nСекунд сейчас - " + date.getSeconds();
         // alert(text); 
 
-        var date = new Date (2019, 11, 30, 16, 26, 30);
+        var date = new Date(2019, 11, 30, 16, 26, 30);
         date.setMinutes(42); /* set устанавливает значение */
         text = "Год сейчас - " + date.getFullYear();
         text += "\nМесяц сейчас - " + date.getMonth();
@@ -48,6 +48,19 @@
         text += "\nСекунд сейчас - " + date.getSeconds();
         alert(text);
     </script>
+
+
+    <!-- Массивы -->
+
+    <script type="text/javascript">
+        var arr = new Array(3, 5, 58, 12, 25, 590, 123, 2);
+        text = "Длина массива - " + arr.length;
+        text += "\nМассив состоит из - " + arr.join(", ");
+        text += "\nСортированный массив - " + (arr.sort()).join(", ");
+
+        alert(text);
+    </script>
+
 </body>
 
 </html>

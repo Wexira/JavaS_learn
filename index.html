@@ -230,7 +230,7 @@
 
     <!-- Функции -->
 
-    <script type="text/javascript">
+   <!--  <script type="text/javascript">
       // function print() {
       //   document.write("Hello <br> World");
       // }
@@ -250,6 +250,23 @@
       count(5, 7);
       print("<br>");
       print(summ);
+    </script> -->
+
+<!-- Локальные и глобальные переменные -->
+
+    <script type="text/javascript">
+    var global = 12; 
+    i = 10; /* - это переменная является глобальной и она распространяется по всему коду, 
+    глобальная переменная задается в самом коде */
+
+    function test () {
+      global++;
+      var i = 5; /* i задана как локальная переменная, она записана в функции и действует только в конкретной функции */
+    }
+
+    test()
+    document.write("Global -" + global + ", variable i -" + i);
     </script>
+
   </body>
 </html>

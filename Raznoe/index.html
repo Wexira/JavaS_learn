@@ -7,11 +7,11 @@
     <script>
         $(document).ready(function () {
             $("#hide").click(function () {
-                if ($("#passField").ic(':visible'))
+                if ($("#passField").is(':visible')) 
                     $("#passField").hide();
                 else
                     $("#passField").show();
-            });
+            });  
         });
     </script>
 </head>
@@ -23,3 +23,6 @@
 </body>
 
 </html>
+
+<!-- Ошибку в коде можно найти с помощью "alert();" вставляя в каждую строку кода и проверяя код,
+     если в строке есть ошибка, код не сработает -->

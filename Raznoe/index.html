@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Выбор случайного цвета</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#hide").click(function () {
+                if ($("#passField").ic(':visible'))
+                    $("#passField").hide();
+                else
+                    $("#passField").show();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button id="hide">Скрыть/показать поле с паролем</button>
+    <br><br>
+    <input type="password" placeholder="Пароль" name="" id="passField">
+</body>
+
+</html>
